@@ -2,6 +2,10 @@ class KittensController < ApplicationController
 include KittensHelper
   def index
     @kittens = Kitten.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @kittens }
+    end
   end
 
   def show
