@@ -1,0 +1,8 @@
+<h1> KITTENS!!!!! </h1>
+<% @kittens.each do |kitten| %>
+  <div>
+    <%= link_to kitten.name, kitten_path(kitten.id) %>
+  </div>
+<% end %>
+<br />
+<div> <%= link_to 'Add kitty', new_kitten_path %></div>
